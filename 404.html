@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProntoMype</title>
+  <script>
+    (function () {
+      var basePath = "/MVP";
+      var path = window.location.pathname;
+      var route = path.indexOf(basePath) === 0 ? path.slice(basePath.length) : path;
+
+      if (route.charAt(0) !== "/") {
+        route = "/" + route;
+      }
+
+      sessionStorage.setItem(
+        "github-pages-redirect",
+        route + window.location.search + window.location.hash
+      );
+
+      window.location.replace(basePath + "/");
+    })();
+  </script>
+</head>
+
+<body></body>
+
+</html>

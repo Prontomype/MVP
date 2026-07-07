@@ -9,6 +9,20 @@
   <meta name="description"
     content="Streamline your small business operations with a user-friendly platform that helps you sell, collect payments, and manage tasks efficiently." />
   <meta name="robots" content="noindex, nofollow" />
+  <script>
+    (function () {
+      var redirect = sessionStorage.getItem("github-pages-redirect");
+
+      if (!redirect) return;
+
+      sessionStorage.removeItem("github-pages-redirect");
+
+      var basePath = "/MVP";
+      var cleanRedirect = redirect.charAt(0) === "/" ? redirect : "/" + redirect;
+
+      window.history.replaceState(null, "", basePath + cleanRedirect);
+    })();
+  </script>
   <style>
     html,
     body {
@@ -29,7 +43,7 @@
 
     gtag('config', 'G-G15VG6S1NN');
   </script>
-  <script type="module" crossorigin src="/MVP/assets/index-FCLZiYKR.js"></script>
+  <script type="module" crossorigin src="/MVP/assets/index-Cwa5i7i_.js"></script>
   <link rel="stylesheet" crossorigin href="/MVP/assets/index-BqULYZzY.css">
 </head>
 
